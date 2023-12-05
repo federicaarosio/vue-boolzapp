@@ -31,10 +31,6 @@ body {
 
 
 /* Margin, padding, colors --------------------------------*/
-.p-05 {
-    padding: .5rem;
-}
-
 .px-05 {
     padding: 0 .5rem;
 }
@@ -146,4 +142,32 @@ section.right-container {
 div.conversation-box {
     height: calc(100% - 8rem);
     background-image: url(../img/mine.jpg);
+    padding: 1rem;
+}
+
+.single-message-box {
+    list-style: none;
+}
+
+.single-message {
+    padding: 1rem;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+.sent {
+    float: right;
+    background-color: #d5f9ba;
+}
+
+.received {
+    float: left;
+    background-color: #ffffff;
 }
