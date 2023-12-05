@@ -9,9 +9,6 @@ main {
     width: 100vw;
     background-color: #dcdbd2;
     position: relative;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 div.green-band {
@@ -23,11 +20,11 @@ section.webapp-box {
     width: 85%;
     height: 95%;
     background-color: #eaeaea;
-    display: flex;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
 }
 
 section.left-container {
@@ -40,3 +37,7 @@ section.right-container {
     border: 2px solid orange;
 }
 
+nav {
+    height: 4rem;
+    border: 1px solid white;
+}
