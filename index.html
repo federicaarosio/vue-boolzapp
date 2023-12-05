@@ -11,65 +11,88 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+
+    <div id="app">
+
+        <main>
+
+            <section class="webapp-box">
+                <!-- left container-->
+                <section class="left-container">
+                    <nav class="box menu">
+                        <div class="avatar-wrapper">
+                            <img src="./img/avatar_io.jpg" alt="personal avatar" class="my-avatar avatar">
+                            <div class="name p-05">Sofia</div>
+                        </div>
+                        <div class="icons-menu">
+                            <i class="fa-solid fa-circle-notch p-05"></i>
+                            <i class="fa-solid fa-message p-05"></i>
+                            <i class="fa-solid fa-ellipsis-vertical p-05"></i>
+                        </div>
+                    </nav>
     
-    <main>
-
-        <section class="webapp-box">
-            <!-- left container-->
-            <section class="left-container">
-                <nav class="box menu">
-                    <div class="avatar-wrapper">
-                        <img src="./img/avatar_io.jpg" alt="personal avatar" class="my-avatar avatar">
-                        <div class="name">Sofia</div>
+                    <!-- Enable notification box -->
+                    <div class="enable-notifications box">
+                        <div class="avatar-wrapper">
+                            <div class="avatar d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-bell-slash" style="color: #8edbfc;"></i>
+                            </div>
+                            <div class="d-flex notifications-wrapper">
+                                <div class="p-05">Ricevi notifiche di nuovi messaggi</div>
+                                <div class="p-05">Attiva notifiche desktop</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="icons-menu">
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <i class="fa-solid fa-message"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                </nav>
-
-                <!-- Enable notification box -->
-                <div class="enable-notifications box"></div>
-
-                <!-- Searchbar -->
-                <div class="searchbar"></div>
-
-                <!-- Contacts -->
-                <section class="contacts">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
+    
+                    <!-- Searchbar -->
+                    <div class="searchbar"></div>
+    
+                    <!-- Contacts -->
+                    <section class="contacts">
+                        <div class="box d-flex justify-content-between">
+                            <div class="avatar-wrapper">
+                                <img src="./img/avatar_io.jpg" alt="personal avatar" class="my-avatar avatar">
+                                <div class="name p-05">Sofia</div>
+                            </div>
+                            <div class="time">
+                                10:00
+                            </div>
+                        </div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </section>
                 </section>
+        
+                <!-- right container-->
+                <section class="right-container">
+                    <nav class="box"></nav>
+    
+                    <!-- Conversation box -->
+                    <div class="conversation-box"></div>
+    
+                    <!-- Bar for composing messages -->
+                    <div class="composing-msg-wrapper box"></div>
+                </section>
+    
             </section>
     
-            <!-- right container-->
-            <section class="right-container">
-                <nav class="box"></nav>
+            <div class="green-band"></div>
+    
+        </main>
 
-                <!-- Conversation box -->
-                <div class="conversation-box"></div>
-
-                <!-- Bar for composing messages -->
-                <div class="composing-msg-wrapper box"></div>
-            </section>
-
-        </section>
-
-        <div class="green-band"></div>
-
-    </main>
-
+    </div>
 
     <script src="./js/script.js"></script>
 </body>
