@@ -6,6 +6,7 @@ createApp({
         return {
             contacts: [
                 {
+                    id: 0,
                     name: 'Michele',
                     avatar: './img/avatar_1.jpg',
                     visible: true,
@@ -28,7 +29,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Fabio',
+                    id: 1,
+                    ame: 'Fabio',
                     avatar: './img/avatar_2.jpg',
                     visible: true,
                     messages: [
@@ -50,6 +52,7 @@ createApp({
                     ],
                 },
                 {
+                    id: 2,
                     name: 'Samuele',
                     avatar: './img/avatar_3.jpg',
                     visible: true,
@@ -72,6 +75,7 @@ createApp({
                     ],
                 },
                 {
+                    id: 3,
                     name: 'Alessandro B.',
                     avatar: './img/avatar_4.jpg',
                     visible: true,
@@ -89,6 +93,7 @@ createApp({
                     ],
                 },
                 {
+                    id: 4,
                     name: 'Alessandro L.',
                     avatar: './img/avatar_5.jpg',
                     visible: true,
@@ -106,6 +111,7 @@ createApp({
                     ],
                 },
                 {
+                    id: 5,
                     name: 'Claudia',
                     avatar: './img/avatar_6.jpg',
                     visible: true,
@@ -128,6 +134,7 @@ createApp({
                     ],
                 },
                 {
+                    id: 6,
                     name: 'Federico',
                     avatar: './img/avatar_7.jpg',
                     visible: true,
@@ -145,6 +152,7 @@ createApp({
                     ],
                 },
                 {
+                    id: 7,
                     name: 'Davide',
                     avatar: './img/avatar_8.jpg',
                     visible: true,
@@ -169,5 +177,9 @@ createApp({
             ]
             
         }
+    },
+
+    methods: {
+
     },
 }).mount('#app');

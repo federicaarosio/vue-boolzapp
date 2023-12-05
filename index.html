@@ -50,7 +50,7 @@
     
                     <!-- Searchbar -->
                     <div class="searchbar-container d-flex align-items-center">
-                        <div class="input-button">
+                        <div class="input-button d-flex align-items-center px-05">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                         <input type="text" placeholder="Cerca o inizia una nuova chat" class="searchbar">
@@ -100,22 +100,43 @@
                     <div class="conversation-box">
                         <ul class="messages-list">
                             <li class="single-message-box clearfix">
-                                <p class="single-message sent">Blablabla bla bla</p>
+                                <!-- dovrò fare v-for sul li -->
+                                <div class="single-message sent clearfix">
+                                    <p class="text-message">blabla</p>
+                                    <p class="message-time light-text">12:00</p>
+                                </div>
+                            </li>
+                            <!-- <li class="single-message-box clearfix">
+                                <div class="single-message sent clearfix">
+                                    <p class="text-message">Blablabla bla bla</p>
+                                    <p class="message-time light-text">12:00</p>
+                                </div>
                             </li>
                             <li class="single-message-box clearfix">
-                                <p class="single-message received">Blablabla bla bla</p>
+                                <div class="single-message received clearfix">
+                                    <p class="text-message">Blablabla bla bla</p>
+                                    <p class="message-time light-text">12:00</p>
+                                </div>
                             </li>
                             <li class="single-message-box clearfix">
-                                <p class="single-message sent">Blablabla bla bla</p>
-                            </li>
-                            <li class="single-message-box clearfix">
-                                <p class="single-message sent">Blablabla bla bla</p>
-                            </li>
+                                <div class="single-message sent clearfix">
+                                    <p class="text-message">Blablabla bla bla</p>
+                                    <p class="message-time light-text">12:00</p>
+                                </div>
+                            </li> -->
                         </ul>                      
                     </div>
     
                     <!-- Bar for composing messages -->
-                    <div class="composing-msg-wrapper box"></div>
+                    <footer class="composing-msg-wrapper d-flex align-items-center justify-content-between">
+                        <div class="add-emoji">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </div>
+                        <input type="text" placeholder="Scrivi un messaggio" class="send-message">
+                        <div class="mic">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
+                    </footer>
                 </section>
     
             </section>

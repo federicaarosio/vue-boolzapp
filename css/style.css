@@ -101,8 +101,21 @@ div.avatar-wrapper{
 
 /* Searchbar */
 div.searchbar-container {
-    height: 2.5rem;
+    height: 3rem;
     margin: 0 1rem;
+}
+
+input {
+    height: 2rem;
+    font-size: 1rem;
+    padding: .5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-button {
+    background-color: white;
+    height: 2rem;
 }
 
 input.searchbar {
@@ -124,7 +137,7 @@ div.notifications-wrapper {
 
 /* Contacts */
 .contacts {
-    height: calc(100% - 10.5rem);
+    height: calc(100% - 11rem);
     overflow-y: scroll;
 }
 
@@ -150,10 +163,17 @@ div.conversation-box {
 }
 
 .single-message {
-    padding: 1rem;
+    width: 300px;
     border-radius: 10px;
     display: inline-block;
     margin-bottom: .5rem;
+    text-align: left;
+    position: relative;
+}
+
+.single-message > p.text-message {
+    float: left;
+    padding: 1rem;
 }
 
 .clearfix::after {
@@ -170,4 +190,23 @@ div.conversation-box {
 .received {
     float: left;
     background-color: #ffffff;
+}
+
+.message-time {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+/* Write message */
+.composing-msg-wrapper {
+    height: 4rem;
+}
+
+.composing-msg-wrapper > div {
+    margin: 0 1rem;
+}
+
+input.send-message {
+    width: 100%;
 }
