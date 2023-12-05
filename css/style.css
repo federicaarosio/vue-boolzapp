@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    background-color: #dcdbd2;
+    position: relative;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+div.green-band {
+    background-color: #009688;
+    height: 120px;
+}
+
+section.webapp-box {
+    width: 85%;
+    height: 95%;
+    background-color: #eaeaea;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section.left-container {
+    width: 35%;
+    border: 2px solid lightseagreen;
+}
+
+section.right-container {
+    width: 65%;
+    border: 2px solid orange;
+}
+
