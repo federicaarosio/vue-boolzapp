@@ -24,7 +24,7 @@
                     <nav class="box menu">
                         <div class="avatar-wrapper">
                             <img src="./img/avatar_io.jpg" alt="personal avatar" class="my-avatar avatar">
-                            <div class="name p-05">Sofia</div>
+                            <p class="name p-05">Sofia</p>
                         </div>
                         <div class="icons-menu">
                             <i class="fa-solid fa-circle-notch p-05"></i>
@@ -40,38 +40,38 @@
                                 <i class="fa-solid fa-bell-slash" style="color: #8edbfc;"></i>
                             </div>
                             <div class="d-flex notifications-wrapper">
-                                <div class="p-05">Ricevi notifiche di nuovi messaggi</div>
-                                <div class="p-05">Attiva notifiche desktop</div>
+                                <div class="px-05">Ricevi notifiche di nuovi messaggi</div>
+                                <div class="light-text px-05">Attiva notifiche desktop</div>
                             </div>
                         </div>
                     </div>
     
                     <!-- Searchbar -->
-                    <div class="searchbar"></div>
+                    <div class="searchbar-container d-flex align-items-center">
+                        <div class="input-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" class="searchbar">
+                    </div>
     
                     <!-- Contacts -->
                     <section class="contacts">
-                        <div class="box d-flex justify-content-between">
-                            <div class="avatar-wrapper">
-                                <img src="./img/avatar_io.jpg" alt="personal avatar" class="my-avatar avatar">
-                                <div class="name p-05">Sofia</div>
-                            </div>
-                            <div class="time">
-                                10:00
-                            </div>
-                        </div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                        <ul>
+                            <!-- Single contact -->
+                            <li v-for="(contact, index) in contacts" class="box contact-box d-flex justify-content-between">
+                                <div class="avatar-wrapper">
+                                    <img :src="contacts[index].avatar" alt="personal avatar" class="my-avatar avatar">
+                                    <div class="d-flex flex-column px-05">
+                                        <p class="name">{{ contact.name }}</p>
+                                        <p class="last-message light-text">Ultimo messaggio inviato</p>
+                                    </div>
+                                </div>
+                                <div class="time light-text">
+                                    12:00
+                                </div>
+                            </li>
+                        </ul>
+
                     </section>
                 </section>
         

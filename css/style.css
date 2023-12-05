@@ -8,6 +8,44 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Flexbox -----------------------------------------*/
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+
+/* Margin, padding, colors --------------------------------*/
+.p-05 {
+    padding: .5rem;
+}
+
+.px-05 {
+    padding: 0 .5rem;
+}
+
+.light-text {
+    color: #d1cfd0;
+    font-size: .7rem;
+}
+
+
+/* Main ----------------------------------------------*/
 main {
     height: 100vh;
     width: 100vw;
@@ -31,35 +69,15 @@ section.webapp-box {
     display: flex;
 }
 
+
+/* Left container-------------------------------------- */
 section.left-container {
     width: 35%;
     height: 100%;
 }
 
-section.right-container {
-    width: 65%;
-    height: 100%;
-}
-
-.d-flex {
-    display: flex;
-}
-
-.justify-content-center {
-    justify-content: center;
-}
-
-.justify-content-between {
-    justify-content: space-between;
-}
-
-.align-items-center {
-    align-items: center;
-}
-
 .box {
     height: 4rem;
-    border: 1px solid white;
     padding: 1rem;
 }
 
@@ -69,10 +87,8 @@ nav.menu {
     align-items: center;
 }
 
-.p-05 {
-    padding: .5rem;
-}
 
+/* Avatar */
 div.avatar-wrapper{
     display: flex;
     align-items: center;
@@ -86,6 +102,19 @@ div.avatar-wrapper{
     text-align: center;
 }
 
+
+/* Searchbar */
+div.searchbar-container {
+    height: 2.5rem;
+    margin: 0 1rem;
+}
+
+input.searchbar {
+    width: 100%;
+}
+
+
+/* Notifications */
 div.enable-notifications {
     background-color: #8edafc;
     display: flex;
@@ -96,9 +125,22 @@ div.notifications-wrapper {
     flex-direction: column;
 }
 
+
+/* Contacts */
 .contacts {
-    height: calc(100% - 8rem);
+    height: calc(100% - 10.5rem);
     overflow-y: scroll;
+}
+
+.contact-box {
+    background-color: white;
+}
+
+
+/* Right container -------------------------------------*/
+section.right-container {
+    width: 65%;
+    height: 100%;
 }
 
 div.conversation-box {
