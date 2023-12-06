@@ -187,7 +187,7 @@ createApp({
             console.log(this.activeIndex);
         },
 
-    // TODO: data del messaggio
+    // TODO: data del nuovo messaggio
 
         newMessage() {
             const newAnswer = {
@@ -198,8 +198,19 @@ createApp({
             if (this.newMessageElement != "") {
                 this.contacts[this.activeIndex].messages.push(newAnswer);
                 this.newMessageElement = "";
+                this.botAnswer();
             }
+        },
 
+        botAnswer() {
+            const newBotAnswer = {
+                date: '10/01/2020 15:30:55',
+                message: 'HODOR',
+                status: 'received'
+            }
+            setTimeout(() => {
+                this.contacts[this.activeIndex].messages.push(newBotAnswer);
+            }, 1000);
         }
     },
 
