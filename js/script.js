@@ -188,11 +188,9 @@ createApp({
             console.log(this.activeIndex);
         },
 
-    // TODO: data del nuovo messaggio
-
         newMessage() {
             const newAnswer = {
-                date: '10/01/2020 15:30:55',
+                date: this.getNewDate(),
                 message: this.newMessageElement,
                 status: 'sent'
             }
@@ -205,7 +203,7 @@ createApp({
 
         botAnswer() {
             const newBotAnswer = {
-                date: '10/01/2020 15:30:55',
+                date: this.getNewDate(),
                 message: 'HODOR',
                 status: 'received'
             }
@@ -216,14 +214,29 @@ createApp({
 
         searchContact(string) {
             this.contacts.forEach(element => {
-                const isVisible = element.name.toLowerCase().includes(string.toLowerCase());
-                if (!isVisible) {
+                const includesInputSearched = element.name.toLowerCase().includes(string.toLowerCase());
+                if (!includesInputSearched) {
                     element.visible = false;
                 } else {
                     element.visible = true;
                 }
             })
-        }
+        },
+
+        getNewDate() {
+            const fullDate = new Date();
+            const day = fullDate.getDate();
+            const month = fullDate.getMonth() + 1;
+            const year = fullDate.getFullYear();
+            const hours = fullDate.getHours();
+            const minutes = fullDate.getMinutes();
+            const seconds = fullDate.getSeconds();
+            const formatDate = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+            
+            return formatDate;     
+        },
+
+
 
     },
 
