@@ -4,6 +4,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            activeIndex: 0,
             contacts: [
                 {
                     id: 0,
@@ -30,7 +31,7 @@ createApp({
                 },
                 {
                     id: 1,
-                    ame: 'Fabio',
+                    name: 'Fabio',
                     avatar: './img/avatar_2.jpg',
                     visible: true,
                     messages: [
@@ -180,6 +181,18 @@ createApp({
     },
 
     methods: {
+        // changeVisibility(contact) {
+        //     contact.visible = !contact.visible;
+        //     console.log(contact.visible);
+        // }
 
+        changeChat(index){
+            this.activeIndex = index;
+            console.log(this.activeIndex);
+        },
+
+        
     },
+
+    
 }).mount('#app');

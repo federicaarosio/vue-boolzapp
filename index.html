@@ -18,15 +18,15 @@
 
         <main>
 
-            <section class="webapp-box">
+            <section class="webapp-box d-flex">
                 <!-- left container-->
                 <section class="left-container">
 
-                    <!-- Left menu -->
-                    <nav class="box menu">
-                        <div class="avatar-wrapper">
+                    <!-- Current profile -->
+                    <nav class="box menu d-flex justify-content-between align-items-center">
+                        <div class="avatar-wrapper d-flex align-items-center">
                             <img src="./img/avatar_io.jpg" alt="personal avatar" class="my-avatar avatar">
-                            <p class="name p-05">Sofia</p>
+                            <p class="name px-05">Sofia</p>
                         </div>
                         <div class="icons-menu">
                             <i class="fa-solid fa-circle-notch px-05"></i>
@@ -35,13 +35,13 @@
                         </div>
                     </nav>
     
-                    <!-- Enable notification box -->
-                    <div class="enable-notifications box">
-                        <div class="avatar-wrapper">
+                    <!-- Notifications box -->
+                    <div class="enable-notifications box d-flex">
+                        <div class="avatar-wrapper d-flex align-items-center">
                             <div class="avatar d-flex justify-content-center align-items-center">
                                 <i class="fa-solid fa-bell-slash" style="color: #8edbfc;"></i>
                             </div>
-                            <div class="d-flex notifications-wrapper">
+                            <div class="notifications-wrapper d-flex flex-column">
                                 <div class="px-05">Ricevi notifiche di nuovi messaggi</div>
                                 <div class="light-text px-05">Attiva notifiche desktop</div>
                             </div>
@@ -60,9 +60,9 @@
                     <section class="contacts">
                         <ul>
                             <!-- Single contact -->
-                            <li v-for="(contact, index) in contacts" class="box contact-box d-flex justify-content-between">
-                                <div class="avatar-wrapper">
-                                    <img :src="contacts[index].avatar" alt="personal avatar" class="my-avatar avatar">
+                            <li v-for="(contact, index) in contacts" :key="contact.id" @click="changeChat(index)" class="box contact-box d-flex justify-content-between" :class ="(index === activeIndex)  ? 'active' : ''">
+                                <div class="avatar-wrapper d-flex align-items-center">
+                                    <img :src="contact.avatar" alt="personal avatar" class="my-avatar avatar">
                                     <div class="d-flex flex-column px-05">
                                         <p class="name">{{ contact.name }}</p>
                                         <p class="last-message light-text">Ultimo messaggio inviato</p>
@@ -77,15 +77,15 @@
                     </section>
                 </section>
         
-                <!-- right container-->
+                <!-- Right container-->
                 <section class="right-container">
                     
                     <!-- Right menu -->
-                    <nav class="box menu">
-                        <div class="avatar-wrapper">
-                            <img src="./img/avatar_io.jpg" alt="personal avatar" class="my-avatar avatar">
+                    <nav class="box menu d-flex justify-content-between align-items-center">
+                        <div class="avatar-wrapper d-flex align-items-center">
+                            <img :src="contacts[activeIndex].avatar" alt="personal avatar" class="my-avatar avatar">
                             <div class="d-flex flex-column px-05">
-                                <p class="name">Nome</p>
+                                <p class="name">{{ contacts[activeIndex].name }}</p>
                                 <p class="last-message light-text">Ultimo accesso oggi alle 12:00</p>
                             </div>
                         </div>
@@ -99,31 +99,12 @@
                     <!-- Conversation box -->
                     <div class="conversation-box">
                         <ul class="messages-list">
-                            <li class="single-message-box clearfix">
-                                <!-- dovrò fare v-for sul li -->
-                                <div class="single-message sent clearfix">
-                                    <p class="text-message">blabla</p>
+                            <li class="single-message-box clearfix" v-for="chat in contacts[activeIndex].messages">
+                                <div class="single-message" :class ="(chat.status === 'sent')  ? 'sent' : 'received'">
+                                    <p class="text-message">{{chat.message}}</p>
                                     <p class="message-time light-text">12:00</p>
                                 </div>
                             </li>
-                            <!-- <li class="single-message-box clearfix">
-                                <div class="single-message sent clearfix">
-                                    <p class="text-message">Blablabla bla bla</p>
-                                    <p class="message-time light-text">12:00</p>
-                                </div>
-                            </li>
-                            <li class="single-message-box clearfix">
-                                <div class="single-message received clearfix">
-                                    <p class="text-message">Blablabla bla bla</p>
-                                    <p class="message-time light-text">12:00</p>
-                                </div>
-                            </li>
-                            <li class="single-message-box clearfix">
-                                <div class="single-message sent clearfix">
-                                    <p class="text-message">Blablabla bla bla</p>
-                                    <p class="message-time light-text">12:00</p>
-                                </div>
-                            </li> -->
                         </ul>                      
                     </div>
     

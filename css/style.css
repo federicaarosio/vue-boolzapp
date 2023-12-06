@@ -62,7 +62,6 @@ section.webapp-box {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
 }
 
 
@@ -77,19 +76,8 @@ section.left-container {
     padding: 1rem;
 }
 
-nav.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 
 /* Avatar */
-div.avatar-wrapper{
-    display: flex;
-    align-items: center;
-}
-
 .avatar {
     width: 40px;
     height: 40px;
@@ -126,12 +114,6 @@ input.searchbar {
 /* Notifications */
 div.enable-notifications {
     background-color: #8edafc;
-    display: flex;
-}
-
-div.notifications-wrapper {
-    display: flex;
-    flex-direction: column;
 }
 
 
@@ -156,8 +138,11 @@ div.conversation-box {
     height: calc(100% - 8rem);
     background-image: url(../img/mine.jpg);
     padding: 1rem;
+    overflow-y: scroll;
 }
 
+
+/* Message */
 .single-message-box {
     list-style: none;
 }
@@ -172,7 +157,7 @@ div.conversation-box {
 }
 
 .single-message > p.text-message {
-    float: left;
+    text-align: left;
     padding: 1rem;
 }
 
@@ -196,6 +181,10 @@ div.conversation-box {
     position: absolute;
     bottom: 5px;
     right: 5px;
+}
+
+.active {
+    background-color: #e9ebeb;
 }
 
 /* Write message */
