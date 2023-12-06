@@ -5,6 +5,7 @@ createApp({
     data() {
         return {
             activeIndex: 0,
+            newMessageElement: '',
             contacts: [
                 {
                     id: 0,
@@ -181,17 +182,25 @@ createApp({
     },
 
     methods: {
-        // changeVisibility(contact) {
-        //     contact.visible = !contact.visible;
-        //     console.log(contact.visible);
-        // }
-
         changeChat(index){
             this.activeIndex = index;
             console.log(this.activeIndex);
         },
 
-        
+    // TODO: data del messaggio
+
+        newMessage() {
+            const newAnswer = {
+                date: '10/01/2020 15:30:55',
+                message: this.newMessageElement,
+                status: 'sent'
+            }
+            if (this.newMessageElement != "") {
+                this.contacts[this.activeIndex].messages.push(newAnswer);
+                this.newMessageElement = "";
+            }
+
+        }
     },
 
     
