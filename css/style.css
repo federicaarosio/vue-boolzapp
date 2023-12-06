@@ -143,7 +143,7 @@ div.conversation-box {
 
 
 /* Message */
-.single-message-box {
+ul {
     list-style: none;
 }
 
@@ -198,4 +198,30 @@ div.conversation-box {
 
 input.send-message {
     width: 100%;
+}
+
+.arrow-d-menu {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.dropdown-menu {
+    background-color: white;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    z-index: 1;
+    font-size: .8rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.dropdown-menu li {
+    padding: .7rem;
+    width: 120px;
+}
+
+.dropdown-menu li:hover {
+    background-color: rgb(240, 240, 240);
 }

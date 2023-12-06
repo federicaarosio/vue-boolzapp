@@ -7,6 +7,7 @@ createApp({
             activeIndex: 0,
             newMessageElement: '',
             searchInput: '',
+            toggle: false,
             contacts: [
                 {
                     id: 0,
