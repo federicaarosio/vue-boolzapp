@@ -213,6 +213,12 @@ createApp({
             }, 1000);
         },
 
+        deleteMessage(index, activeIndex) {
+            this.contacts[activeIndex].messages.splice(index, 1);
+            console.log(index);
+            console.log(activeIndex);
+        },
+
         searchContact(string) {
             this.contacts.forEach(element => {
                 const includesInputSearched = element.name.toLowerCase().includes(string.toLowerCase());
