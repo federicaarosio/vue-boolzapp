@@ -6,6 +6,7 @@ createApp({
         return {
             activeIndex: 0,
             newMessageElement: '',
+            searchInput: '',
             contacts: [
                 {
                     id: 0,
@@ -211,7 +212,12 @@ createApp({
             setTimeout(() => {
                 this.contacts[this.activeIndex].messages.push(newBotAnswer);
             }, 1000);
+        },
+
+        searchContact() {
+            console.log(this.searchInput);
         }
+
     },
 
     
