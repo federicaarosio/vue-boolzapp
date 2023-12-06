@@ -53,14 +53,14 @@
                         <div class="input-button d-flex align-items-center px-05">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat" class="searchbar" v-model="searchInput" @input="searchContact()">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" class="searchbar" v-model="searchInput" @input="searchContact(searchInput)">
                     </div>
     
                     <!-- Contacts -->
                     <section class="contacts">
                         <ul>
                             <!-- Single contact -->
-                            <li v-for="(contact, index) in contacts" :key="contacts.id" v-if="contacts[activeIndex].visible" @click="changeChat(index)" class="box contact-box d-flex justify-content-between" :class ="(index === activeIndex)  ? 'active' : ''" >
+                            <li v-for="(contact, index) in contacts" :key="contacts.id" v-show="contact.visible" @click="changeChat(index)" class="box contact-box d-flex justify-content-between" :class ="(index === activeIndex)  ? 'active' : ''" >
                                 <div class="avatar-wrapper d-flex align-items-center">
                                     <img :src="contact.avatar" alt="personal avatar" class="my-avatar avatar">
                                     <div class="d-flex flex-column px-05">

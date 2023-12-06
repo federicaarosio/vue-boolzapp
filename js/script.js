@@ -214,8 +214,15 @@ createApp({
             }, 1000);
         },
 
-        searchContact() {
-            console.log(this.searchInput);
+        searchContact(string) {
+            this.contacts.forEach(element => {
+                const isVisible = element.name.toLowerCase().includes(string.toLowerCase());
+                if (!isVisible) {
+                    element.visible = false;
+                } else {
+                    element.visible = true;
+                }
+            })
         }
 
     },
