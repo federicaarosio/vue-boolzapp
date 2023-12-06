@@ -28,7 +28,7 @@
                             <img src="./img/avatar_io.jpg" alt="personal avatar" class="my-avatar avatar">
                             <p class="name px-05">Sofia</p>
                         </div>
-                        <div class="icons-menu">
+                        <div class="icons-menu icon-gray">
                             <i class="fa-solid fa-circle-notch px-05"></i>
                             <i class="fa-solid fa-message px-05"></i>
                             <i class="fa-solid fa-ellipsis-vertical px-05"></i>
@@ -43,7 +43,7 @@
                             </div>
                             <div class="notifications-wrapper d-flex flex-column">
                                 <div class="px-05">Ricevi notifiche di nuovi messaggi</div>
-                                <div class="light-text px-05">Attiva notifiche desktop</div>
+                                <div class="light-text px-05 underlined-text">Attiva notifiche desktop</div>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                                 <p class="last-message light-text">Ultimo accesso oggi alle 12:00</p>
                             </div>
                         </div>
-                        <div class="icons-menu">
+                        <div class="icons-menu icon-gray">
                             <i class="fa-solid fa-magnifying-glass px-05"></i>
                             <i class="fa-solid fa-paperclip px-05"></i>
                             <i class="fa-solid fa-ellipsis-vertical px-05"></i>
@@ -106,7 +106,7 @@
                                     <div class="arrow-d-menu"><i class="fa-solid fa-chevron-down"></i>
                                         <ul class="dropdown-menu" v-show='chat.toggle'>
                                             <li>Message info</li>
-                                            <li @click="deleteMessage(index, activeIndex)">Delete Message</li>
+                                            <li @click="deleteMessage(index, activeIndex)" @click="chat.toggle = !chat.toggle">Delete Message</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -116,11 +116,11 @@
     
                     <!-- Bar for composing messages -->
                     <footer class="composing-msg-wrapper d-flex align-items-center justify-content-between">
-                        <div class="add-emoji">
+                        <div class="add-emoji icon-gray">
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
                         <input type="text" placeholder="Scrivi un messaggio" class="send-message" v-model="newMessageElement" @keyup.enter="newMessage()">
-                        <div class="mic">
+                        <div class="mic icon-gray">
                             <i class="fa-solid fa-microphone"></i>
                         </div>
                     </footer>

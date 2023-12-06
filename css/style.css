@@ -36,8 +36,17 @@ body {
 }
 
 .light-text {
-    color: #d1cfd0;
+    color: #cecece;
     font-size: .7rem;
+}
+
+.underlined-text {
+    text-decoration: underline;
+    color: #9d9d9d;
+}
+
+.icon-gray {
+    color: #b1b1b1;
 }
 
 
@@ -104,10 +113,14 @@ input {
 .input-button {
     background-color: white;
     height: 2rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 input.searchbar {
     width: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 
@@ -121,10 +134,12 @@ div.enable-notifications {
 .contacts {
     height: calc(100% - 11rem);
     overflow-y: scroll;
+    background-color: white;
 }
 
 .contact-box {
     background-color: white;
+    border-bottom: 1px solid #e9ebeb;
 }
 
 
