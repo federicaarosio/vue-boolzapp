@@ -36,13 +36,12 @@ body {
 }
 
 .light-text {
-    color: #cecece;
+    color: #9d9d9d;
     font-size: .7rem;
 }
 
 .underlined-text {
     text-decoration: underline;
-    color: #9d9d9d;
 }
 
 .icon-gray {
@@ -202,20 +201,8 @@ ul {
     background-color: #e9ebeb;
 }
 
-/* Write message */
-.composing-msg-wrapper {
-    height: 4rem;
-}
-
-.composing-msg-wrapper > div {
-    margin: 0 1rem;
-}
-
-input.send-message {
-    width: 100%;
-}
-
-.arrow-d-menu {
+/* Dropdown menu */
+.message-menu {
     position: absolute;
     top: 5px;
     right: 10px;
@@ -239,4 +226,18 @@ input.send-message {
 
 .dropdown-menu li:hover {
     background-color: rgb(240, 240, 240);
+}
+
+
+/* Write message */
+.composing-msg-wrapper {
+    height: 4rem;
+}
+
+.composing-msg-wrapper > div {
+    margin: 0 1rem;
+}
+
+input.send-message {
+    width: 100%;
 }
