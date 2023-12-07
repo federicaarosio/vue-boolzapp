@@ -99,12 +99,12 @@
                     <!-- Conversation box -->
                     <div class="conversation-box">
                         <ul class="messages-list">
-                            <li class="single-message-box clearfix" v-for="(chat, index) in contacts[activeIndex].messages">
-                                <div class="single-message" :class ="(chat.status === 'sent')  ? 'sent' : 'received'" @click="chat.toggle = !chat.toggle">
-                                    <p class="text-message">{{chat.message}}</p>
-                                    <p class="message-time light-text">{{chat.date}}</p>
+                            <li class="single-message-box clearfix" v-for="(message, index) in contacts[activeIndex].messages">
+                                <div class="single-message" :class ="(message.status === 'sent')  ? 'sent' : 'received'" @click="showMenu(activeIndex, index)">
+                                    <p class="text-message">{{message.message}}</p>
+                                    <p class="message-time light-text">{{message.date}}</p>
                                     <div class="message-menu"><i class="fa-solid fa-chevron-down"></i>
-                                        <ul class="dropdown-menu" v-show='chat.toggle'>
+                                        <ul class="dropdown-menu" v-if='message.toggle'>
                                             <li>Message info</li>
                                             <li @click="deleteMessage(activeIndex, index)">Delete Message</li>
                                         </ul>

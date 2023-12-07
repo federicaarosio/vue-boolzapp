@@ -13,6 +13,7 @@ createApp({
                     name: 'Michele',
                     avatar: './img/avatar_1.jpg',
                     visible: true,
+
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -45,7 +46,6 @@ createApp({
                             message: 'Ciao come stai?',
                             status: 'sent',
                             toggle: false,
-
                         },
                         {
                             date: '20/03/2020 16:30:55',
@@ -112,6 +112,7 @@ createApp({
                     name: 'Alessandro L.',
                     avatar: './img/avatar_5.jpg',
                     visible: true,
+              
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -215,7 +216,6 @@ createApp({
                 date: this.getNewDate(),
                 message: this.newMessageElement,
                 status: 'sent',
-                toggle: false
             }
             if (this.newMessageElement != "") {
                 this.contacts[this.activeIndex].messages.push(newAnswer);
@@ -229,11 +229,20 @@ createApp({
                 date: this.getNewDate(),
                 message: 'HODOR',
                 status: 'received',
-                toggle: false
             }
             setTimeout(() => {
                 this.contacts[this.activeIndex].messages.push(newBotAnswer);
             }, 1000);
+        },
+
+
+
+        showMenu(activeIndex, index){
+            if(!this.contacts[activeIndex].messages[index].toggle) {
+                this.contacts[activeIndex].messages[index].toggle = !this.contacts[activeIndex].messages[index].toggle;
+            } else {
+                this.contacts[activeIndex].messages[index].toggle = !this.contacts[activeIndex].messages[index].toggle;
+            }
         },
 
         deleteMessage(activeIndex, index) {
