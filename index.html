@@ -100,11 +100,11 @@
                     <div class="conversation-box">
                         <ul class="messages-list">
                             <li class="single-message-box clearfix" v-for="(message, index) in contacts[activeIndex].messages">
-                                <div class="single-message" :class ="(message.status === 'sent')  ? 'sent' : 'received'" @click="showMenu(activeIndex, index)">
+                                <div class="single-message" :class ="(message.status === 'sent')  ? 'sent' : 'received'">
                                     <p class="text-message">{{message.message}}</p>
                                     <p class="message-time light-text">{{message.date}}</p>
                                     <div class="message-menu"><i class="fa-solid fa-chevron-down"></i>
-                                        <ul class="dropdown-menu" v-if='message.toggle'>
+                                        <ul class="dropdown-menu">
                                             <li>Message info</li>
                                             <li @click="deleteMessage(activeIndex, index)">Delete Message</li>
                                         </ul>

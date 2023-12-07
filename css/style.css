@@ -206,6 +206,11 @@ ul {
     position: absolute;
     top: 5px;
     right: 10px;
+    display: none;
+}
+
+div.single-message:hover .message-menu {
+    display: block;
 }
 
 .dropdown-menu {

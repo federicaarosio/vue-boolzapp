@@ -235,15 +235,13 @@ createApp({
             }, 1000);
         },
 
-
-
-        showMenu(activeIndex, index){
-            if(!this.contacts[activeIndex].messages[index].toggle) {
-                this.contacts[activeIndex].messages[index].toggle = !this.contacts[activeIndex].messages[index].toggle;
-            } else {
-                this.contacts[activeIndex].messages[index].toggle = !this.contacts[activeIndex].messages[index].toggle;
-            }
-        },
+        // showMenu(activeIndex, index){
+        //     if(!this.contacts[activeIndex].messages[index].toggle) {
+        //         this.contacts[activeIndex].messages[index].toggle = !this.contacts[activeIndex].messages[index].toggle;
+        //     } else {
+        //         this.contacts[activeIndex].messages[index].toggle = !this.contacts[activeIndex].messages[index].toggle;
+        //     }
+        // },
 
         deleteMessage(activeIndex, index) {
             this.contacts[activeIndex].messages.splice(index, 1);
